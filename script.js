@@ -12,11 +12,11 @@ $(document).ready(function () {
     }).then(function (response) {
         console.log(response);
         console.log(queryURL);
-        var imgThree = src = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
+        var imgThree = src = "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
         var newCard = `<div id="weather" class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title" style="font-size:50px; margin-bottom:20px; color:red">${response.name}</h5>
-            <img src="http://openweathermap.org/img/w/${response.weather[0].icon}.png" >
+            <img src="https://openweathermap.org/img/w/${response.weather[0].icon}.png" >
             <h6 class="card-subtitle mb-2 text-muted">Temperature: ${response.main.temp}</h6>
             <p class="card-text">Humidity: ${response.main.humidity}</p>
             <p class="card-text">Wind Speed: ${response.wind.speed}</p>
@@ -26,7 +26,7 @@ $(document).ready(function () {
 
         weather.append(newCard)
     })
-    var queryURLFour = 'http://openweathermap.org/data/2.5/forecast?q=' + 'London' + 'us&mode=xml&appid=b6907d289e10d714a6e88b30761fae22';
+    var queryURLFour = 'https://openweathermap.org/data/2.5/forecast?q=' + 'London' + 'us&mode=xml&appid=b6907d289e10d714a6e88b30761fae22';
     $.ajax({
         url: queryURLFour,
         method: "GET"
@@ -44,7 +44,7 @@ $(document).ready(function () {
                 console.log("day: ", forecastRes.list[i].dt_txt, day)
                 var forecastName = $('<div class="col"><p>' + day[0] + '</p>')
                 // add icon logos based on their weather conditions
-                var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + forecastRes.list[i].weather[0].icon + ".png");
+                var img = $("<img>").attr("src", "https://openweathermap.org/img/w/" + forecastRes.list[i].weather[0].icon + ".png");
                 var tempFive = $('<div id = "tempFive">' + 'Temperature: ' + forecastRes.list[i].main.temp + '<div>');
                 var humFive = $('<div id = "humFive"> ' + 'Humidity: ' + forecastRes.list[i].main.humidity + '<div>');
                 forecastName.append(img);
@@ -81,12 +81,12 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (responseR) {
             console.log(responseR);
-            var imgTwo = src = "http://openweathermap.org/img/w/" + responseR.weather[0].icon + ".png";
+            var imgTwo = src = "https://openweathermap.org/img/w/" + responseR.weather[0].icon + ".png";
             console.log(responseR.weather[0].icon);
             var newCard = `<div id="weather" class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title" style="font-size:40px; margin-bottom:20px; color:red">${responseR.name + ' '}</h5>
-                                <img src="http://openweathermap.org/img/w/${responseR.weather[0].icon}.png" >
+                                <img src="https://openweathermap.org/img/w/${responseR.weather[0].icon}.png" >
                                 <h6 class="card-subtitle mb-2 text-muted">Temperature: ${responseR.main.temp}</h6>
                                 <p class="card-text">Humidity: ${responseR.main.humidity}</p>
                                 <p class="card-text">Wind Speed: ${responseR.wind.speed}</p>
@@ -98,7 +98,7 @@ $(document).ready(function () {
             weather.append(newCard)
         })
         //create another function where the api displays the weather results for the nxt 5 days beneath it
-        var queryURLThree = 'http://openweathermap.org/data/2.5/forecast?q=' + city + 'us&mode=xml&appid=b6907d289e10d714a6e88b30761fae22';
+        var queryURLThree = 'https://openweathermap.org/data/2.5/forecast?q=' + city + 'us&mode=xml&appid=b6907d289e10d714a6e88b30761fae22';
         $.ajax({
             url: queryURLThree,
             method: "GET"
@@ -114,7 +114,7 @@ $(document).ready(function () {
                     var forecastNameS = $('<div class="col"><p>' + day[0] + '</p>')
                     // add icon logos based on their weather conditions
 
-                    var imgOne = $("<img>").attr("src", "http://openweathermap.org/img/w/" + forecastResT.list[i].weather[0].icon + ".png");
+                    var imgOne = $("<img>").attr("src", "https://openweathermap.org/img/w/" + forecastResT.list[i].weather[0].icon + ".png");
                     var tempFiveOne = $('<div id = "tempFive">' + 'Temperature: ' + forecastResT.list[i].main.temp + '<div>');
                     var humFiveOne = $('<div id = "humFive"> ' + 'Humidity: ' + forecastResT.list[i].main.humidity + '<div>');
                     console.log(forecastNameS.append(imgOne));
