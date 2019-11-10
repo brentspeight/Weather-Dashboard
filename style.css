@@ -1,0 +1,40 @@
+h1{
+    color: white;
+    text-align: center;
+}
+
+tr { display: block; 
+    float: left;
+    border-style: solid; 
+    border-color: black;
+}
+th, td { display: block; }
+#black{
+   
+    margin-top: 20px;
+
+}
+#weatherInfo{
+    border-style: solid;
+    border-block-color: black;
+    
+
+}
+.container-fluid{
+background-color: white;
+}
+body{
+    background-color: gray;
+
+}
+
+#humFive{
+    margin-top: 20px;
+}
+#tempFive{
+    margin-top: 10px;
+}
+ul{
+    list-style-type: none;
+    font-size: 30px;
+}
