@@ -1,4 +1,4 @@
-# Weather-Dashboard
+# Weather-Dashboard https://brentspeight.github.io/Weather-Dashboard/
 we manipulate the DOM using JavaScript or jQuery, we are leveraging the DOM API. An API, or application programming interface, is a set of protocols that allows us to hook into the functionality of another application and use it within our own. The DOM API is an example of a client-side API. There are numerous client-side web APIs that extend the functionality of the browser. One such API is XMLHttpRequest, which allows us to communicate with server-side APIs. 
 
 Companies and organizations that collect and store data often make that data available to web developers to use in their applications. A server-side API is one or more URLs, or endpoints, where we can make requests for data stored on a third-party server.
